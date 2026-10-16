@@ -150,7 +150,7 @@
 - [x] Contact, social icons, Google Maps embed, reorganized columns.
 
 # Phase 2 — Kelola Berita Admin Module
-- [ ] Build /admin/news management page: stats, search, status/category filters, sorting, pagination.
-- [ ] Article table with thumbnails, status badges, and Lihat/Edit/Hapus actions (delete with confirmation).
-- [ ] Reuse src/lib/news.ts store; preserve existing public articles and thumbnails.
-- [ ] Verify navigation, superadmin-only access, responsive layout, and tests.
+- [x] Build /admin/news management page: stats, search, status/category filters, sorting, pagination.
+- [x] Article table with thumbnails, status badges, and Lihat/Edit/Hapus actions (delete with confirmation).
+- [x] Reuse src/lib/news.ts store; preserve existing public articles and thumbnails.
+- [x] Verify navigation, superadmin-only access, responsive layout, and tests.
