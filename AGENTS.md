@@ -1,4 +1,5 @@
 <!-- LOVABLE:BEGIN -->
+
 > [!IMPORTANT]
 > This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
 > published git history — force pushing, or rebasing/amending/squashing commits
@@ -7,4 +8,27 @@
 >
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
+
 <!-- LOVABLE:END -->
+
+## Application architecture
+
+- Use TanStack Router file routes with `/app` as the shared shell and separate leaf routes for each module; this preserves the installed framework and makes later phases independently extensible.
+- Keep navigation metadata and shared page metadata in a browser-safe module, and static demo content in the frontend; Phase 1 needs no services or persistence.
+- Define visual roles in the global semantic design system and use existing shadcn controls; this keeps the foundation consistent without additional dependencies.
+- Keep compliance and review state in a React provider around the `/app` shell, linking evidence by existing product, run, test, and repository IDs; this preserves local edits across navigation without persistence or duplicated product records.
+- Keep public sign-in and sign-up routes outside the `/app` shell and share their presentation in one component; this isolates account screens without altering module navigation or introducing authentication guards.
+- Derive analytics, geospatial, and forecast views from the shared use case registry plus explicitly labeled simulation helpers in one module; this keeps totals consistent across pages and avoids duplicate fixtures.
+- Centralize demo role state and module permissions in a React provider around the app shell; sidebar filtering and route presentation share the same rules without implying real authorization or changing demo data ownership.
+- Keep the sole demo indicator and role switcher in the shared application navbar; display-only label normalization must never rewrite stored statuses or permission rules.
+- Keep all assistant conversations in one module-level store in `src/lib/assistant.ts` with typed sender-tagged messages and a per-conversation handler status; the full page and drawer share one history and AI/CS handoff never splits it.
+- Keep the client organization profile in `src/lib/organization.ts` with a stable `key` matching `UseCase.org`; display edits never relink products or duplicate organization records.
+- Keep proposal document metadata in `src/lib/documents.ts`, linked by `productId`; the upload dialog is shared by product detail and the registration wizard so files never leave the browser.
+- Stage document batches inside the shared upload dialog and validate them through the document module before committing; independent metadata, aggregate attachment limits, and cancelled drafts remain consistent across both callers.
+- Keep CS queue assignment (`assignedCsId`) separate from the active handler status in `src/lib/assistant.ts`; assigning never starts human handling, so takeover stays an explicit CS action.
+- Keep the administrative audit trail in one store in `src/lib/audit.ts`; admin, permission, organization, and CS actions append to it so there is never a second audit system.
+- Scope client-visible product lists through one shared hook (src/lib/scope.ts); every listing page applies the same organization filter.
+- Keep the public feature showcase in a homepage-only component with static presentation data; it must not depend on or mutate application stores.
+- Derive public homepage statistics through read-only existing demo hooks and assessment fixtures; count red-team runs explicitly rather than conflating security tests with ordinary pipeline builds.
+- Keep testimonial portraits and quotes in the existing homepage-only carousel, with an explicit illustration disclaimer; this avoids presenting fictional personas as real customer endorsements.
+- Keep news articles behind the helpers in `src/lib/news.ts` (published-only, newest-first); homepage carousel and /berita pages share them so a future API swap touches one module.

@@ -10,33 +10,573 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as AppRouteImport } from './routes/app'
+import { Route as ExploreRouteImport } from './routes/explore'
+import { Route as KnowledgeRouteImport } from './routes/knowledge'
+import { Route as SigninRouteImport } from './routes/signin'
+import { Route as SignupRouteImport } from './routes/signup'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as AdminAuditRouteImport } from './routes/admin.audit'
+import { Route as AdminOrganizationsRouteImport } from './routes/admin.organizations'
+import { Route as AdminPermissionsRouteImport } from './routes/admin.permissions'
+import { Route as AdminUsersRouteImport } from './routes/admin.users'
+import { Route as AppIndexRouteImport } from './routes/app.index'
+import { Route as AppAiConsultationRouteImport } from './routes/app.ai-consultation'
+import { Route as AppAssistantRouteImport } from './routes/app.assistant'
+import { Route as AppComplianceRouteImport } from './routes/app.compliance'
+import { Route as AppDevsecopsRouteImport } from './routes/app.devsecops'
+import { Route as AppEthicsRouteImport } from './routes/app.ethics'
+import { Route as AppOnboardingRouteImport } from './routes/app.onboarding'
+import { Route as AppOrganizationRouteImport } from './routes/app.organization'
+import { Route as AppPolicyRouteImport } from './routes/app.policy'
+import { Route as AppRedTeamingRouteImport } from './routes/app.red-teaming'
+import { Route as AppReportsRouteImport } from './routes/app.reports'
+import { Route as AppReviewsRouteImport } from './routes/app.reviews'
+import { Route as AppRiskRouteImport } from './routes/app.risk'
+import { Route as AppSettingsRouteImport } from './routes/app.settings'
+import { Route as AppUseCasesRouteImport } from './routes/app.use-cases'
+import { Route as BeritaIndexRouteImport } from './routes/berita.index'
+import { Route as BeritaSlugRouteImport } from './routes/berita.$slug'
+import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
+import { Route as KnowledgeSlugRouteImport } from './routes/knowledge.$slug'
+import { Route as AdminNewsIndexRouteImport } from './routes/admin.news.index'
+import { Route as AdminNewsNewRouteImport } from './routes/admin.news.new'
+import { Route as AppAnalyticsAdoptionRouteImport } from './routes/app.analytics.adoption'
+import { Route as AppAnalyticsForecastRouteImport } from './routes/app.analytics.forecast'
+import { Route as AppAnalyticsGeospatialRouteImport } from './routes/app.analytics.geospatial'
+import { Route as AppComplianceIndexRouteImport } from './routes/app.compliance.index'
+import { Route as AppDevsecopsIndexRouteImport } from './routes/app.devsecops.index'
+import { Route as AppRedTeamingIndexRouteImport } from './routes/app.red-teaming.index'
+import { Route as AppSupportInboxRouteImport } from './routes/app.support.inbox'
+import { Route as AppUseCasesIndexRouteImport } from './routes/app.use-cases.index'
+import { Route as AppUseCasesIdRouteImport } from './routes/app.use-cases.$id'
+import { Route as AppUseCasesNewRouteImport } from './routes/app.use-cases.new'
+import { Route as AppComplianceAssessmentsIdRouteImport } from './routes/app.compliance.assessments.$id'
+import { Route as AppDevsecopsRepositoriesIdRouteImport } from './routes/app.devsecops.repositories.$id'
+import { Route as AppRedTeamingRunsIdRouteImport } from './routes/app.red-teaming.runs.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppRoute = AppRouteImport.update({
+  id: '/app',
+  path: '/app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExploreRoute = ExploreRouteImport.update({
+  id: '/explore',
+  path: '/explore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeRoute = KnowledgeRouteImport.update({
+  id: '/knowledge',
+  path: '/knowledge',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SigninRoute = SigninRouteImport.update({
+  id: '/signin',
+  path: '/signin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminAuditRoute = AdminAuditRouteImport.update({
+  id: '/audit',
+  path: '/audit',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminOrganizationsRoute = AdminOrganizationsRouteImport.update({
+  id: '/organizations',
+  path: '/organizations',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminPermissionsRoute = AdminPermissionsRouteImport.update({
+  id: '/permissions',
+  path: '/permissions',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminUsersRoute = AdminUsersRouteImport.update({
+  id: '/users',
+  path: '/users',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AppIndexRoute = AppIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAiConsultationRoute = AppAiConsultationRouteImport.update({
+  id: '/ai-consultation',
+  path: '/ai-consultation',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAssistantRoute = AppAssistantRouteImport.update({
+  id: '/assistant',
+  path: '/assistant',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppComplianceRoute = AppComplianceRouteImport.update({
+  id: '/compliance',
+  path: '/compliance',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppDevsecopsRoute = AppDevsecopsRouteImport.update({
+  id: '/devsecops',
+  path: '/devsecops',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppEthicsRoute = AppEthicsRouteImport.update({
+  id: '/ethics',
+  path: '/ethics',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppOnboardingRoute = AppOnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppOrganizationRoute = AppOrganizationRouteImport.update({
+  id: '/organization',
+  path: '/organization',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPolicyRoute = AppPolicyRouteImport.update({
+  id: '/policy',
+  path: '/policy',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppRedTeamingRoute = AppRedTeamingRouteImport.update({
+  id: '/red-teaming',
+  path: '/red-teaming',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppReportsRoute = AppReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppReviewsRoute = AppReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppRiskRoute = AppRiskRouteImport.update({
+  id: '/risk',
+  path: '/risk',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSettingsRoute = AppSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppUseCasesRoute = AppUseCasesRouteImport.update({
+  id: '/use-cases',
+  path: '/use-cases',
+  getParentRoute: () => AppRoute,
+} as any)
+const BeritaIndexRoute = BeritaIndexRouteImport.update({
+  id: '/berita/',
+  path: '/berita/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BeritaSlugRoute = BeritaSlugRouteImport.update({
+  id: '/berita/$slug',
+  path: '/berita/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeIndexRoute = KnowledgeIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => KnowledgeRoute,
+} as any)
+const KnowledgeSlugRoute = KnowledgeSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => KnowledgeRoute,
+} as any)
+const AdminNewsIndexRoute = AdminNewsIndexRouteImport.update({
+  id: '/news/',
+  path: '/news/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminNewsNewRoute = AdminNewsNewRouteImport.update({
+  id: '/news/new',
+  path: '/news/new',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AppAnalyticsAdoptionRoute = AppAnalyticsAdoptionRouteImport.update({
+  id: '/analytics/adoption',
+  path: '/analytics/adoption',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAnalyticsForecastRoute = AppAnalyticsForecastRouteImport.update({
+  id: '/analytics/forecast',
+  path: '/analytics/forecast',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAnalyticsGeospatialRoute = AppAnalyticsGeospatialRouteImport.update({
+  id: '/analytics/geospatial',
+  path: '/analytics/geospatial',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppComplianceIndexRoute = AppComplianceIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppComplianceRoute,
+} as any)
+const AppDevsecopsIndexRoute = AppDevsecopsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppDevsecopsRoute,
+} as any)
+const AppRedTeamingIndexRoute = AppRedTeamingIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppRedTeamingRoute,
+} as any)
+const AppSupportInboxRoute = AppSupportInboxRouteImport.update({
+  id: '/support/inbox',
+  path: '/support/inbox',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppUseCasesIndexRoute = AppUseCasesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppUseCasesRoute,
+} as any)
+const AppUseCasesIdRoute = AppUseCasesIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => AppUseCasesRoute,
+} as any)
+const AppUseCasesNewRoute = AppUseCasesNewRouteImport.update({
+  id: '/new',
+  path: '/new',
+  getParentRoute: () => AppUseCasesRoute,
+} as any)
+const AppComplianceAssessmentsIdRoute =
+  AppComplianceAssessmentsIdRouteImport.update({
+    id: '/assessments/$id',
+    path: '/assessments/$id',
+    getParentRoute: () => AppComplianceRoute,
+  } as any)
+const AppDevsecopsRepositoriesIdRoute =
+  AppDevsecopsRepositoriesIdRouteImport.update({
+    id: '/repositories/$id',
+    path: '/repositories/$id',
+    getParentRoute: () => AppDevsecopsRoute,
+  } as any)
+const AppRedTeamingRunsIdRoute = AppRedTeamingRunsIdRouteImport.update({
+  id: '/runs/$id',
+  path: '/runs/$id',
+  getParentRoute: () => AppRedTeamingRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRouteWithChildren
+  '/app': typeof AppRouteWithChildren
+  '/explore': typeof ExploreRoute
+  '/knowledge': typeof KnowledgeRouteWithChildren
+  '/signin': typeof SigninRoute
+  '/signup': typeof SignupRoute
+  '/admin/audit': typeof AdminAuditRoute
+  '/admin/organizations': typeof AdminOrganizationsRoute
+  '/admin/permissions': typeof AdminPermissionsRoute
+  '/admin/users': typeof AdminUsersRoute
+  '/app/ai-consultation': typeof AppAiConsultationRoute
+  '/app/assistant': typeof AppAssistantRoute
+  '/app/compliance': typeof AppComplianceRouteWithChildren
+  '/app/devsecops': typeof AppDevsecopsRouteWithChildren
+  '/app/ethics': typeof AppEthicsRoute
+  '/app/onboarding': typeof AppOnboardingRoute
+  '/app/organization': typeof AppOrganizationRoute
+  '/app/policy': typeof AppPolicyRoute
+  '/app/red-teaming': typeof AppRedTeamingRouteWithChildren
+  '/app/reports': typeof AppReportsRoute
+  '/app/reviews': typeof AppReviewsRoute
+  '/app/risk': typeof AppRiskRoute
+  '/app/settings': typeof AppSettingsRoute
+  '/app/use-cases': typeof AppUseCasesRouteWithChildren
+  '/berita/$slug': typeof BeritaSlugRoute
+  '/knowledge/$slug': typeof KnowledgeSlugRoute
+  '/admin/': typeof AdminIndexRoute
+  '/app/': typeof AppIndexRoute
+  '/berita/': typeof BeritaIndexRoute
+  '/knowledge/': typeof KnowledgeIndexRoute
+  '/admin/news/new': typeof AdminNewsNewRoute
+  '/app/analytics/adoption': typeof AppAnalyticsAdoptionRoute
+  '/app/analytics/forecast': typeof AppAnalyticsForecastRoute
+  '/app/analytics/geospatial': typeof AppAnalyticsGeospatialRoute
+  '/app/support/inbox': typeof AppSupportInboxRoute
+  '/app/use-cases/$id': typeof AppUseCasesIdRoute
+  '/app/use-cases/new': typeof AppUseCasesNewRoute
+  '/admin/news/': typeof AdminNewsIndexRoute
+  '/app/compliance/': typeof AppComplianceIndexRoute
+  '/app/devsecops/': typeof AppDevsecopsIndexRoute
+  '/app/red-teaming/': typeof AppRedTeamingIndexRoute
+  '/app/use-cases/': typeof AppUseCasesIndexRoute
+  '/app/compliance/assessments/$id': typeof AppComplianceAssessmentsIdRoute
+  '/app/devsecops/repositories/$id': typeof AppDevsecopsRepositoriesIdRoute
+  '/app/red-teaming/runs/$id': typeof AppRedTeamingRunsIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/explore': typeof ExploreRoute
+  '/signin': typeof SigninRoute
+  '/signup': typeof SignupRoute
+  '/admin/audit': typeof AdminAuditRoute
+  '/admin/organizations': typeof AdminOrganizationsRoute
+  '/admin/permissions': typeof AdminPermissionsRoute
+  '/admin/users': typeof AdminUsersRoute
+  '/app/ai-consultation': typeof AppAiConsultationRoute
+  '/app/assistant': typeof AppAssistantRoute
+  '/app/ethics': typeof AppEthicsRoute
+  '/app/onboarding': typeof AppOnboardingRoute
+  '/app/organization': typeof AppOrganizationRoute
+  '/app/policy': typeof AppPolicyRoute
+  '/app/reports': typeof AppReportsRoute
+  '/app/reviews': typeof AppReviewsRoute
+  '/app/risk': typeof AppRiskRoute
+  '/app/settings': typeof AppSettingsRoute
+  '/berita/$slug': typeof BeritaSlugRoute
+  '/knowledge/$slug': typeof KnowledgeSlugRoute
+  '/admin': typeof AdminIndexRoute
+  '/app': typeof AppIndexRoute
+  '/berita': typeof BeritaIndexRoute
+  '/knowledge': typeof KnowledgeIndexRoute
+  '/admin/news/new': typeof AdminNewsNewRoute
+  '/app/analytics/adoption': typeof AppAnalyticsAdoptionRoute
+  '/app/analytics/forecast': typeof AppAnalyticsForecastRoute
+  '/app/analytics/geospatial': typeof AppAnalyticsGeospatialRoute
+  '/app/support/inbox': typeof AppSupportInboxRoute
+  '/app/use-cases/$id': typeof AppUseCasesIdRoute
+  '/app/use-cases/new': typeof AppUseCasesNewRoute
+  '/admin/news': typeof AdminNewsIndexRoute
+  '/app/compliance': typeof AppComplianceIndexRoute
+  '/app/devsecops': typeof AppDevsecopsIndexRoute
+  '/app/red-teaming': typeof AppRedTeamingIndexRoute
+  '/app/use-cases': typeof AppUseCasesIndexRoute
+  '/app/compliance/assessments/$id': typeof AppComplianceAssessmentsIdRoute
+  '/app/devsecops/repositories/$id': typeof AppDevsecopsRepositoriesIdRoute
+  '/app/red-teaming/runs/$id': typeof AppRedTeamingRunsIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRouteWithChildren
+  '/app': typeof AppRouteWithChildren
+  '/explore': typeof ExploreRoute
+  '/knowledge': typeof KnowledgeRouteWithChildren
+  '/signin': typeof SigninRoute
+  '/signup': typeof SignupRoute
+  '/admin/audit': typeof AdminAuditRoute
+  '/admin/organizations': typeof AdminOrganizationsRoute
+  '/admin/permissions': typeof AdminPermissionsRoute
+  '/admin/users': typeof AdminUsersRoute
+  '/app/ai-consultation': typeof AppAiConsultationRoute
+  '/app/assistant': typeof AppAssistantRoute
+  '/app/compliance': typeof AppComplianceRouteWithChildren
+  '/app/devsecops': typeof AppDevsecopsRouteWithChildren
+  '/app/ethics': typeof AppEthicsRoute
+  '/app/onboarding': typeof AppOnboardingRoute
+  '/app/organization': typeof AppOrganizationRoute
+  '/app/policy': typeof AppPolicyRoute
+  '/app/red-teaming': typeof AppRedTeamingRouteWithChildren
+  '/app/reports': typeof AppReportsRoute
+  '/app/reviews': typeof AppReviewsRoute
+  '/app/risk': typeof AppRiskRoute
+  '/app/settings': typeof AppSettingsRoute
+  '/app/use-cases': typeof AppUseCasesRouteWithChildren
+  '/berita/$slug': typeof BeritaSlugRoute
+  '/knowledge/$slug': typeof KnowledgeSlugRoute
+  '/admin/': typeof AdminIndexRoute
+  '/app/': typeof AppIndexRoute
+  '/berita/': typeof BeritaIndexRoute
+  '/knowledge/': typeof KnowledgeIndexRoute
+  '/admin/news/new': typeof AdminNewsNewRoute
+  '/app/analytics/adoption': typeof AppAnalyticsAdoptionRoute
+  '/app/analytics/forecast': typeof AppAnalyticsForecastRoute
+  '/app/analytics/geospatial': typeof AppAnalyticsGeospatialRoute
+  '/app/support/inbox': typeof AppSupportInboxRoute
+  '/app/use-cases/$id': typeof AppUseCasesIdRoute
+  '/app/use-cases/new': typeof AppUseCasesNewRoute
+  '/admin/news/': typeof AdminNewsIndexRoute
+  '/app/compliance/': typeof AppComplianceIndexRoute
+  '/app/devsecops/': typeof AppDevsecopsIndexRoute
+  '/app/red-teaming/': typeof AppRedTeamingIndexRoute
+  '/app/use-cases/': typeof AppUseCasesIndexRoute
+  '/app/compliance/assessments/$id': typeof AppComplianceAssessmentsIdRoute
+  '/app/devsecops/repositories/$id': typeof AppDevsecopsRepositoriesIdRoute
+  '/app/red-teaming/runs/$id': typeof AppRedTeamingRunsIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/admin'
+    | '/app'
+    | '/explore'
+    | '/knowledge'
+    | '/signin'
+    | '/signup'
+    | '/admin/audit'
+    | '/admin/organizations'
+    | '/admin/permissions'
+    | '/admin/users'
+    | '/app/ai-consultation'
+    | '/app/assistant'
+    | '/app/compliance'
+    | '/app/devsecops'
+    | '/app/ethics'
+    | '/app/onboarding'
+    | '/app/organization'
+    | '/app/policy'
+    | '/app/red-teaming'
+    | '/app/reports'
+    | '/app/reviews'
+    | '/app/risk'
+    | '/app/settings'
+    | '/app/use-cases'
+    | '/berita/$slug'
+    | '/knowledge/$slug'
+    | '/admin/'
+    | '/app/'
+    | '/berita/'
+    | '/knowledge/'
+    | '/admin/news/new'
+    | '/app/analytics/adoption'
+    | '/app/analytics/forecast'
+    | '/app/analytics/geospatial'
+    | '/app/support/inbox'
+    | '/app/use-cases/$id'
+    | '/app/use-cases/new'
+    | '/admin/news/'
+    | '/app/compliance/'
+    | '/app/devsecops/'
+    | '/app/red-teaming/'
+    | '/app/use-cases/'
+    | '/app/compliance/assessments/$id'
+    | '/app/devsecops/repositories/$id'
+    | '/app/red-teaming/runs/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/explore'
+    | '/signin'
+    | '/signup'
+    | '/admin/audit'
+    | '/admin/organizations'
+    | '/admin/permissions'
+    | '/admin/users'
+    | '/app/ai-consultation'
+    | '/app/assistant'
+    | '/app/ethics'
+    | '/app/onboarding'
+    | '/app/organization'
+    | '/app/policy'
+    | '/app/reports'
+    | '/app/reviews'
+    | '/app/risk'
+    | '/app/settings'
+    | '/berita/$slug'
+    | '/knowledge/$slug'
+    | '/admin'
+    | '/app'
+    | '/berita'
+    | '/knowledge'
+    | '/admin/news/new'
+    | '/app/analytics/adoption'
+    | '/app/analytics/forecast'
+    | '/app/analytics/geospatial'
+    | '/app/support/inbox'
+    | '/app/use-cases/$id'
+    | '/app/use-cases/new'
+    | '/admin/news'
+    | '/app/compliance'
+    | '/app/devsecops'
+    | '/app/red-teaming'
+    | '/app/use-cases'
+    | '/app/compliance/assessments/$id'
+    | '/app/devsecops/repositories/$id'
+    | '/app/red-teaming/runs/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/app'
+    | '/explore'
+    | '/knowledge'
+    | '/signin'
+    | '/signup'
+    | '/admin/audit'
+    | '/admin/organizations'
+    | '/admin/permissions'
+    | '/admin/users'
+    | '/app/ai-consultation'
+    | '/app/assistant'
+    | '/app/compliance'
+    | '/app/devsecops'
+    | '/app/ethics'
+    | '/app/onboarding'
+    | '/app/organization'
+    | '/app/policy'
+    | '/app/red-teaming'
+    | '/app/reports'
+    | '/app/reviews'
+    | '/app/risk'
+    | '/app/settings'
+    | '/app/use-cases'
+    | '/berita/$slug'
+    | '/knowledge/$slug'
+    | '/admin/'
+    | '/app/'
+    | '/berita/'
+    | '/knowledge/'
+    | '/admin/news/new'
+    | '/app/analytics/adoption'
+    | '/app/analytics/forecast'
+    | '/app/analytics/geospatial'
+    | '/app/support/inbox'
+    | '/app/use-cases/$id'
+    | '/app/use-cases/new'
+    | '/admin/news/'
+    | '/app/compliance/'
+    | '/app/devsecops/'
+    | '/app/red-teaming/'
+    | '/app/use-cases/'
+    | '/app/compliance/assessments/$id'
+    | '/app/devsecops/repositories/$id'
+    | '/app/red-teaming/runs/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRouteWithChildren
+  AppRoute: typeof AppRouteWithChildren
+  ExploreRoute: typeof ExploreRoute
+  KnowledgeRoute: typeof KnowledgeRouteWithChildren
+  SigninRoute: typeof SigninRoute
+  SignupRoute: typeof SignupRoute
+  BeritaSlugRoute: typeof BeritaSlugRoute
+  BeritaIndexRoute: typeof BeritaIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +588,474 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/app': {
+      id: '/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explore': {
+      id: '/explore'
+      path: '/explore'
+      fullPath: '/explore'
+      preLoaderRoute: typeof ExploreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge': {
+      id: '/knowledge'
+      path: '/knowledge'
+      fullPath: '/knowledge'
+      preLoaderRoute: typeof KnowledgeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signin': {
+      id: '/signin'
+      path: '/signin'
+      fullPath: '/signin'
+      preLoaderRoute: typeof SigninRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/audit': {
+      id: '/admin/audit'
+      path: '/audit'
+      fullPath: '/admin/audit'
+      preLoaderRoute: typeof AdminAuditRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/organizations': {
+      id: '/admin/organizations'
+      path: '/organizations'
+      fullPath: '/admin/organizations'
+      preLoaderRoute: typeof AdminOrganizationsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/permissions': {
+      id: '/admin/permissions'
+      path: '/permissions'
+      fullPath: '/admin/permissions'
+      preLoaderRoute: typeof AdminPermissionsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/users': {
+      id: '/admin/users'
+      path: '/users'
+      fullPath: '/admin/users'
+      preLoaderRoute: typeof AdminUsersRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/app/': {
+      id: '/app/'
+      path: '/'
+      fullPath: '/app/'
+      preLoaderRoute: typeof AppIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/ai-consultation': {
+      id: '/app/ai-consultation'
+      path: '/ai-consultation'
+      fullPath: '/app/ai-consultation'
+      preLoaderRoute: typeof AppAiConsultationRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/assistant': {
+      id: '/app/assistant'
+      path: '/assistant'
+      fullPath: '/app/assistant'
+      preLoaderRoute: typeof AppAssistantRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/compliance': {
+      id: '/app/compliance'
+      path: '/compliance'
+      fullPath: '/app/compliance'
+      preLoaderRoute: typeof AppComplianceRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/devsecops': {
+      id: '/app/devsecops'
+      path: '/devsecops'
+      fullPath: '/app/devsecops'
+      preLoaderRoute: typeof AppDevsecopsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/ethics': {
+      id: '/app/ethics'
+      path: '/ethics'
+      fullPath: '/app/ethics'
+      preLoaderRoute: typeof AppEthicsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/onboarding': {
+      id: '/app/onboarding'
+      path: '/onboarding'
+      fullPath: '/app/onboarding'
+      preLoaderRoute: typeof AppOnboardingRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/organization': {
+      id: '/app/organization'
+      path: '/organization'
+      fullPath: '/app/organization'
+      preLoaderRoute: typeof AppOrganizationRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/policy': {
+      id: '/app/policy'
+      path: '/policy'
+      fullPath: '/app/policy'
+      preLoaderRoute: typeof AppPolicyRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/red-teaming': {
+      id: '/app/red-teaming'
+      path: '/red-teaming'
+      fullPath: '/app/red-teaming'
+      preLoaderRoute: typeof AppRedTeamingRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/reports': {
+      id: '/app/reports'
+      path: '/reports'
+      fullPath: '/app/reports'
+      preLoaderRoute: typeof AppReportsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/reviews': {
+      id: '/app/reviews'
+      path: '/reviews'
+      fullPath: '/app/reviews'
+      preLoaderRoute: typeof AppReviewsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/risk': {
+      id: '/app/risk'
+      path: '/risk'
+      fullPath: '/app/risk'
+      preLoaderRoute: typeof AppRiskRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/settings': {
+      id: '/app/settings'
+      path: '/settings'
+      fullPath: '/app/settings'
+      preLoaderRoute: typeof AppSettingsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/use-cases': {
+      id: '/app/use-cases'
+      path: '/use-cases'
+      fullPath: '/app/use-cases'
+      preLoaderRoute: typeof AppUseCasesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/berita/': {
+      id: '/berita/'
+      path: '/berita'
+      fullPath: '/berita/'
+      preLoaderRoute: typeof BeritaIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/berita/$slug': {
+      id: '/berita/$slug'
+      path: '/berita/$slug'
+      fullPath: '/berita/$slug'
+      preLoaderRoute: typeof BeritaSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge/': {
+      id: '/knowledge/'
+      path: '/'
+      fullPath: '/knowledge/'
+      preLoaderRoute: typeof KnowledgeIndexRouteImport
+      parentRoute: typeof KnowledgeRoute
+    }
+    '/knowledge/$slug': {
+      id: '/knowledge/$slug'
+      path: '/$slug'
+      fullPath: '/knowledge/$slug'
+      preLoaderRoute: typeof KnowledgeSlugRouteImport
+      parentRoute: typeof KnowledgeRoute
+    }
+    '/admin/news/': {
+      id: '/admin/news/'
+      path: '/news'
+      fullPath: '/admin/news/'
+      preLoaderRoute: typeof AdminNewsIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/news/new': {
+      id: '/admin/news/new'
+      path: '/news/new'
+      fullPath: '/admin/news/new'
+      preLoaderRoute: typeof AdminNewsNewRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/app/analytics/adoption': {
+      id: '/app/analytics/adoption'
+      path: '/analytics/adoption'
+      fullPath: '/app/analytics/adoption'
+      preLoaderRoute: typeof AppAnalyticsAdoptionRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/analytics/forecast': {
+      id: '/app/analytics/forecast'
+      path: '/analytics/forecast'
+      fullPath: '/app/analytics/forecast'
+      preLoaderRoute: typeof AppAnalyticsForecastRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/analytics/geospatial': {
+      id: '/app/analytics/geospatial'
+      path: '/analytics/geospatial'
+      fullPath: '/app/analytics/geospatial'
+      preLoaderRoute: typeof AppAnalyticsGeospatialRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/compliance/': {
+      id: '/app/compliance/'
+      path: '/'
+      fullPath: '/app/compliance/'
+      preLoaderRoute: typeof AppComplianceIndexRouteImport
+      parentRoute: typeof AppComplianceRoute
+    }
+    '/app/devsecops/': {
+      id: '/app/devsecops/'
+      path: '/'
+      fullPath: '/app/devsecops/'
+      preLoaderRoute: typeof AppDevsecopsIndexRouteImport
+      parentRoute: typeof AppDevsecopsRoute
+    }
+    '/app/red-teaming/': {
+      id: '/app/red-teaming/'
+      path: '/'
+      fullPath: '/app/red-teaming/'
+      preLoaderRoute: typeof AppRedTeamingIndexRouteImport
+      parentRoute: typeof AppRedTeamingRoute
+    }
+    '/app/support/inbox': {
+      id: '/app/support/inbox'
+      path: '/support/inbox'
+      fullPath: '/app/support/inbox'
+      preLoaderRoute: typeof AppSupportInboxRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/use-cases/': {
+      id: '/app/use-cases/'
+      path: '/'
+      fullPath: '/app/use-cases/'
+      preLoaderRoute: typeof AppUseCasesIndexRouteImport
+      parentRoute: typeof AppUseCasesRoute
+    }
+    '/app/use-cases/$id': {
+      id: '/app/use-cases/$id'
+      path: '/$id'
+      fullPath: '/app/use-cases/$id'
+      preLoaderRoute: typeof AppUseCasesIdRouteImport
+      parentRoute: typeof AppUseCasesRoute
+    }
+    '/app/use-cases/new': {
+      id: '/app/use-cases/new'
+      path: '/new'
+      fullPath: '/app/use-cases/new'
+      preLoaderRoute: typeof AppUseCasesNewRouteImport
+      parentRoute: typeof AppUseCasesRoute
+    }
+    '/app/compliance/assessments/$id': {
+      id: '/app/compliance/assessments/$id'
+      path: '/assessments/$id'
+      fullPath: '/app/compliance/assessments/$id'
+      preLoaderRoute: typeof AppComplianceAssessmentsIdRouteImport
+      parentRoute: typeof AppComplianceRoute
+    }
+    '/app/devsecops/repositories/$id': {
+      id: '/app/devsecops/repositories/$id'
+      path: '/repositories/$id'
+      fullPath: '/app/devsecops/repositories/$id'
+      preLoaderRoute: typeof AppDevsecopsRepositoriesIdRouteImport
+      parentRoute: typeof AppDevsecopsRoute
+    }
+    '/app/red-teaming/runs/$id': {
+      id: '/app/red-teaming/runs/$id'
+      path: '/runs/$id'
+      fullPath: '/app/red-teaming/runs/$id'
+      preLoaderRoute: typeof AppRedTeamingRunsIdRouteImport
+      parentRoute: typeof AppRedTeamingRoute
+    }
   }
 }
 
+interface AdminRouteChildren {
+  AdminAuditRoute: typeof AdminAuditRoute
+  AdminOrganizationsRoute: typeof AdminOrganizationsRoute
+  AdminPermissionsRoute: typeof AdminPermissionsRoute
+  AdminUsersRoute: typeof AdminUsersRoute
+  AdminIndexRoute: typeof AdminIndexRoute
+  AdminNewsNewRoute: typeof AdminNewsNewRoute
+  AdminNewsIndexRoute: typeof AdminNewsIndexRoute
+}
+
+const AdminRouteChildren: AdminRouteChildren = {
+  AdminAuditRoute: AdminAuditRoute,
+  AdminOrganizationsRoute: AdminOrganizationsRoute,
+  AdminPermissionsRoute: AdminPermissionsRoute,
+  AdminUsersRoute: AdminUsersRoute,
+  AdminIndexRoute: AdminIndexRoute,
+  AdminNewsNewRoute: AdminNewsNewRoute,
+  AdminNewsIndexRoute: AdminNewsIndexRoute,
+}
+
+const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
+
+interface AppComplianceRouteChildren {
+  AppComplianceIndexRoute: typeof AppComplianceIndexRoute
+  AppComplianceAssessmentsIdRoute: typeof AppComplianceAssessmentsIdRoute
+}
+
+const AppComplianceRouteChildren: AppComplianceRouteChildren = {
+  AppComplianceIndexRoute: AppComplianceIndexRoute,
+  AppComplianceAssessmentsIdRoute: AppComplianceAssessmentsIdRoute,
+}
+
+const AppComplianceRouteWithChildren = AppComplianceRoute._addFileChildren(
+  AppComplianceRouteChildren,
+)
+
+interface AppDevsecopsRouteChildren {
+  AppDevsecopsIndexRoute: typeof AppDevsecopsIndexRoute
+  AppDevsecopsRepositoriesIdRoute: typeof AppDevsecopsRepositoriesIdRoute
+}
+
+const AppDevsecopsRouteChildren: AppDevsecopsRouteChildren = {
+  AppDevsecopsIndexRoute: AppDevsecopsIndexRoute,
+  AppDevsecopsRepositoriesIdRoute: AppDevsecopsRepositoriesIdRoute,
+}
+
+const AppDevsecopsRouteWithChildren = AppDevsecopsRoute._addFileChildren(
+  AppDevsecopsRouteChildren,
+)
+
+interface AppRedTeamingRouteChildren {
+  AppRedTeamingIndexRoute: typeof AppRedTeamingIndexRoute
+  AppRedTeamingRunsIdRoute: typeof AppRedTeamingRunsIdRoute
+}
+
+const AppRedTeamingRouteChildren: AppRedTeamingRouteChildren = {
+  AppRedTeamingIndexRoute: AppRedTeamingIndexRoute,
+  AppRedTeamingRunsIdRoute: AppRedTeamingRunsIdRoute,
+}
+
+const AppRedTeamingRouteWithChildren = AppRedTeamingRoute._addFileChildren(
+  AppRedTeamingRouteChildren,
+)
+
+interface AppUseCasesRouteChildren {
+  AppUseCasesIdRoute: typeof AppUseCasesIdRoute
+  AppUseCasesNewRoute: typeof AppUseCasesNewRoute
+  AppUseCasesIndexRoute: typeof AppUseCasesIndexRoute
+}
+
+const AppUseCasesRouteChildren: AppUseCasesRouteChildren = {
+  AppUseCasesIdRoute: AppUseCasesIdRoute,
+  AppUseCasesNewRoute: AppUseCasesNewRoute,
+  AppUseCasesIndexRoute: AppUseCasesIndexRoute,
+}
+
+const AppUseCasesRouteWithChildren = AppUseCasesRoute._addFileChildren(
+  AppUseCasesRouteChildren,
+)
+
+interface AppRouteChildren {
+  AppAiConsultationRoute: typeof AppAiConsultationRoute
+  AppAssistantRoute: typeof AppAssistantRoute
+  AppComplianceRoute: typeof AppComplianceRouteWithChildren
+  AppDevsecopsRoute: typeof AppDevsecopsRouteWithChildren
+  AppEthicsRoute: typeof AppEthicsRoute
+  AppOnboardingRoute: typeof AppOnboardingRoute
+  AppOrganizationRoute: typeof AppOrganizationRoute
+  AppPolicyRoute: typeof AppPolicyRoute
+  AppRedTeamingRoute: typeof AppRedTeamingRouteWithChildren
+  AppReportsRoute: typeof AppReportsRoute
+  AppReviewsRoute: typeof AppReviewsRoute
+  AppRiskRoute: typeof AppRiskRoute
+  AppSettingsRoute: typeof AppSettingsRoute
+  AppUseCasesRoute: typeof AppUseCasesRouteWithChildren
+  AppIndexRoute: typeof AppIndexRoute
+  AppAnalyticsAdoptionRoute: typeof AppAnalyticsAdoptionRoute
+  AppAnalyticsForecastRoute: typeof AppAnalyticsForecastRoute
+  AppAnalyticsGeospatialRoute: typeof AppAnalyticsGeospatialRoute
+  AppSupportInboxRoute: typeof AppSupportInboxRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppAiConsultationRoute: AppAiConsultationRoute,
+  AppAssistantRoute: AppAssistantRoute,
+  AppComplianceRoute: AppComplianceRouteWithChildren,
+  AppDevsecopsRoute: AppDevsecopsRouteWithChildren,
+  AppEthicsRoute: AppEthicsRoute,
+  AppOnboardingRoute: AppOnboardingRoute,
+  AppOrganizationRoute: AppOrganizationRoute,
+  AppPolicyRoute: AppPolicyRoute,
+  AppRedTeamingRoute: AppRedTeamingRouteWithChildren,
+  AppReportsRoute: AppReportsRoute,
+  AppReviewsRoute: AppReviewsRoute,
+  AppRiskRoute: AppRiskRoute,
+  AppSettingsRoute: AppSettingsRoute,
+  AppUseCasesRoute: AppUseCasesRouteWithChildren,
+  AppIndexRoute: AppIndexRoute,
+  AppAnalyticsAdoptionRoute: AppAnalyticsAdoptionRoute,
+  AppAnalyticsForecastRoute: AppAnalyticsForecastRoute,
+  AppAnalyticsGeospatialRoute: AppAnalyticsGeospatialRoute,
+  AppSupportInboxRoute: AppSupportInboxRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
+interface KnowledgeRouteChildren {
+  KnowledgeSlugRoute: typeof KnowledgeSlugRoute
+  KnowledgeIndexRoute: typeof KnowledgeIndexRoute
+}
+
+const KnowledgeRouteChildren: KnowledgeRouteChildren = {
+  KnowledgeSlugRoute: KnowledgeSlugRoute,
+  KnowledgeIndexRoute: KnowledgeIndexRoute,
+}
+
+const KnowledgeRouteWithChildren = KnowledgeRoute._addFileChildren(
+  KnowledgeRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRouteWithChildren,
+  AppRoute: AppRouteWithChildren,
+  ExploreRoute: ExploreRoute,
+  KnowledgeRoute: KnowledgeRouteWithChildren,
+  SigninRoute: SigninRoute,
+  SignupRoute: SignupRoute,
+  BeritaSlugRoute: BeritaSlugRoute,
+  BeritaIndexRoute: BeritaIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
